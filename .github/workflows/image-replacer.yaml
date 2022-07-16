@@ -23,7 +23,7 @@ jobs:
       - name: Run Image Replacer Script
         run: |
           cd ./scripts
-          python image-replacer.yaml
+          python image-replacer.py
       
       - name: Commit Shanges
         run: |

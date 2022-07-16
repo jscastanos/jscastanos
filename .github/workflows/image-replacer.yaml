@@ -1,0 +1,37 @@
+name: Profile Image Replacer
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  image-replacer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytz
+
+      - name: Run Image Replacer Script
+        run: |
+          cd ./scripts
+          python image-replacer.yaml
+      
+      - name: Commit Shanges
+        run: |
+          git config --local user.name "jscastanos"
+          git add README.md README.md.bak
+          git commit -m "chore: replace owl"
+      
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true 

@@ -27,7 +27,8 @@ jobs:
       
       - name: Commit Shanges
         run: |
-          git config --local user.name "jscastanos"
+          git config --global user.email 'jec.castanos@gmail.com'
+          git config --global user.name 'jscastanos'
           git add README.md README.md.bak
           git commit -m "chore: replace owl"
       

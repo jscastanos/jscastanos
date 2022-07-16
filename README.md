@@ -6,7 +6,7 @@
 
 I'm [Jec Castaños](https://github.com/jscastanos), a software engineer from The Philippines 🇵🇭
 
-<img align="right" src="./images/Afternoon Owl.svg" height="250">
+<img id="owl-svg" align="right" src="./images/Afternoon Owl.svg" height="250">
 
 ### About Me
 

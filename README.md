@@ -45,6 +45,6 @@ I'm [Jec Castaños](https://github.com/jscastanos), a software engineer from The
     <img src="https://github.com/jscastanos/devicon/blob/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
   </a> 
   <a href="https://tailwindcss.com/" target="_blank">
-    <img src="https://github.com/jscastanos/devicon/blob/master/icons/tailwindcss/tailwindcss-original-wordmark.svg" alt="tailwind" width="40" height="40"/>
+    <img src="https://github.com/jscastanos/devicon/blob/master/icons/tailwindcss/tailwindcss-plain.svg" alt="tailwind" width="40" height="40"/>
   </a> 
 </p>

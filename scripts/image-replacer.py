@@ -19,9 +19,6 @@ def localOwlTime():
     afternoon_begin = time(12, 1)
     afternoon_end = time(17, 00)
 
-    evening_begin = time(17, 1)
-    evening_end = time(4, 59)
-
     # check time
     if ph_time >= morning_begin and ph_time <= morning_end:
         return 'Day Owl'
@@ -48,7 +45,7 @@ def replaceOwl():
 
         for line in f:
             if(line.startswith('<img id="owl-svg"')):
-                print(line.replace(line, newImage), end='')
+                print(line.replace(line, newImage))
             else:
                 print(line, end='')
 

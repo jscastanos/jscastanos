@@ -6,8 +6,7 @@
 
 I'm [Jec Castaños](https://github.com/jscastanos), a software engineer from The Philippines 🇵🇭
 
-<img id="owl-svg" align="right" src="./images/Afternoon Owl.svg" height="250">- 🥅 Aside from coding, I'm learning how to cook
-- ⚡ Fun fact: I love to draw/doodle. (That owl is me, its made with both ☕ and ❤️)
+<img id="owl-svg" align="right" src="./images/Afternoon Owl.svg" height="250">- ⚡ Fun fact: I love to draw/doodle. (That owl is me, its made with both ☕ and ❤️)
 
 ### Languages and Tools
 

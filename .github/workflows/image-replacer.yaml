@@ -28,7 +28,7 @@ jobs:
         run: |
           git config --global user.email 'jec.castanos@gmail.com'
           git config --global user.name 'jscastanos'
-          git add README.md README.md.bak
+          git add README.md
           git commit -m "chore: replace owl [BOT]"
       
       - name: Push Changes

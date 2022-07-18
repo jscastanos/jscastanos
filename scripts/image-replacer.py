@@ -41,7 +41,7 @@ print(newImage)
 
 # replace our <img src />
 def replaceOwl():
-    with FileInput('../README.md', inplace=True, backup='.bak') as f:
+    with FileInput('../README.md', inplace=True) as f:
 
         for line in f:
             if(line.startswith('<img id="owl-svg"')):

@@ -13,7 +13,7 @@ def localOwlTime():
     ph_time = datetime.now(tz).time()
 
     # time constraint
-    morning_begin = time(5, 00)
+    morning_begin = time(4, 00)
     morning_end = time(12, 00)
 
     afternoon_begin = time(12, 1)

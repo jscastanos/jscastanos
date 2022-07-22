@@ -26,12 +26,12 @@ jobs:
           cd ./scripts
           python image-replacer.py
       
-      - name: Commit Shanges
+      - name: Commit Changes
         run: |
           git config --global user.email 'jec.castanos@gmail.com'
           git config --global user.name 'jscastanos'
           git add .
-          git commit -m "chore: replace owl [BOT]"
+          git commit -m "chore[BOT]: replaced owl"
       
       - name: Push Changes
         uses: ad-m/github-push-action@master

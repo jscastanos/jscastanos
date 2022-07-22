@@ -9,7 +9,7 @@ import pytz
 
 # What is my local time?
 def localOwlTime():
-    tz = pytz.timezone('Europe/Athens')
+    tz = pytz.timezone('Asia/Manila')
     ph_time = datetime.now(tz).time()
 
     # time constraint

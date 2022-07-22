@@ -9,23 +9,23 @@ import pytz
 
 # What is my local time?
 def localOwlTime():
-    tz = pytz.timezone('Asia/Manila')
+    tz = pytz.timezone('Europe/Athens')
     ph_time = datetime.now(tz).time()
 
     # time constraint
-    morning_begin = time(4, 00)
+    morning_begin = time(5, 00)
     morning_end = time(12, 00)
 
-    afternoon_begin = time(12, 1)
-    afternoon_end = time(17, 00)
+    sleep_begin = time(20, 00)
+    sleep_end = time(4, 49)
 
     # check time
     if ph_time >= morning_begin and ph_time <= morning_end:
         return 'Day Owl'
-    elif ph_time >= afternoon_begin and ph_time <= afternoon_end:
-        return 'Afternoon Owl'
-    else:
+    elif ph_time >= sleep_begin and ph_time >= sleep_end:
         return 'Night Owl'
+    else:
+        return 'Afternoon Owl'
 
 
 # our owl

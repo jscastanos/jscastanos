@@ -17,7 +17,7 @@ def localOwlTime():
     morning_end = time(12, 00)
 
     sleep_begin = time(20, 00)
-    sleep_end = time(4, 49)
+    sleep_end = time(4, 59)
 
     # check time
     if ph_time >= morning_begin and ph_time <= morning_end:

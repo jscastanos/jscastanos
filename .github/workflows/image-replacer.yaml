@@ -1,9 +1,11 @@
 name: Profile Image Replacer
 on:
   schedule:
-    - cron: '30 5 * * *' 
-    - cron: '0 12 * * *' 
-    - cron: '0 20 * * *'
+    # NOTE: Until GH Actions supports timezone lets do a conversion for now
+    - cron: '0 21 * * *' # 9PM UTC = 5AM PH
+    - cron: '0 4 * * *' # 4AM UTC  = 12PM PH
+    - cron: '0 12 * * *' # 12PM UTC = 8PM PH
+
 
 jobs:
   image-replacer:
@@ -26,12 +28,30 @@ jobs:
           cd ./scripts
           python image-replacer.py
       
+      - name: Wake Up Owl
+        if: github.event.schedule == '0 21 * * *'
+        run: echo "Wake Up Owl"
+        env:
+          COMMIT_MESSAGE: "Wake up owl"
+
+      - name: Tired Owl
+        if: github.event.schedule == '0 4 * * *'
+        run: echo "Tired Owl"
+        env:
+          COMMIT_MESSAGE: "Tired owl"
+
+      - name: Sleeping Owl
+        if: github.event.schedule == '0 12 * * *'
+        run: echo "Sleeping Owl"
+        env:
+          COMMIT_MESSAGE: "Sleeping owl"
+      
       - name: Commit Changes
         run: |
           git config --global user.email 'jec.castanos@gmail.com'
           git config --global user.name 'jscastanos'
           git add .
-          git commit -m "chore[BOT]: replaced owl"
+          git commit -m "chore[BOT]: ${{ env.COMMIT_MESSAGE }}"
       
       - name: Push Changes
         uses: ad-m/github-push-action@master

@@ -4,7 +4,7 @@ on:
     # NOTE: Until GH Actions supports timezone lets do a conversion for now
     - cron: '0 21 * * *' # 9PM UTC = 5AM PH
     - cron: '0 4 * * *' # 4AM UTC  = 12PM PH
-    - cron: '0 12 * * *' # 12PM UTC = 8PM PH
+    - cron: '0 15 * * *' # 3PM UTC = 11PM PH
 
 
 jobs:
@@ -51,7 +51,7 @@ jobs:
           git config --global user.email 'jec.castanos@gmail.com'
           git config --global user.name 'jscastanos'
           git add .
-          git commit -m "chore[BOT]: ${{ env.COMMIT_MESSAGE }}"
+          git commit -m "chore[BOT]: $COMMIT_MESSAGE"
       
       - name: Push Changes
         uses: ad-m/github-push-action@master

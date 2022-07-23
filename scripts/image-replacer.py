@@ -16,7 +16,7 @@ def localOwlTime():
     morning_begin = time(5, 00)
     morning_end = time(12, 00)
 
-    sleep_begin = time(20, 00)
+    sleep_begin = time(23, 00)
     sleep_end = time(4, 59)
 
     # check time

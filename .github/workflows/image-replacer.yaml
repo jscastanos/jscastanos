@@ -13,7 +13,8 @@ jobs:
   image-replacer:
     runs-on: ubuntu-latest
     steps:
-      - env:
+      - name: Which Schedule
+        env:
           SCHEDULE : ${{ github.event.schedule }}
         run: |
           echo $SCHEDULE
@@ -37,6 +38,7 @@ jobs:
       
       - name: Commit Message
         id: commit-message
+        shell: bash
         run: |
           cd ./scripts
           ls

@@ -28,30 +28,18 @@ jobs:
           cd ./scripts
           python image-replacer.py
       
-      - name: Wake Up Owl
-        if: github.event.schedule == '0 21 * * *'
-        run: echo "Wake Up Owl"
-        env:
-          COMMIT_MESSAGE: "Wake up owl"
+      - name: Commit Message
+        id: commit-message
+        run: |
+          cd ./scripts
+          commit-message.sh
 
-      - name: Tired Owl
-        if: github.event.schedule == '0 4 * * *'
-        run: echo "Tired Owl"
-        env:
-          COMMIT_MESSAGE: "Tired owl"
-
-      - name: Sleeping Owl
-        if: github.event.schedule == '0 12 * * *'
-        run: echo "Sleeping Owl"
-        env:
-          COMMIT_MESSAGE: "Sleeping owl"
-      
       - name: Commit Changes
         run: |
           git config --global user.email 'jec.castanos@gmail.com'
           git config --global user.name 'jscastanos'
           git add .
-          git commit -m "chore[BOT]: $COMMIT_MESSAGE"
+          git commit -m "chore[BOT]: ${{ steps.commit-message.outputs.COMMIT_MESSAGE }}"
       
       - name: Push Changes
         uses: ad-m/github-push-action@master

@@ -38,6 +38,8 @@ jobs:
       - name: Commit Message
         id: commit-message
         run: |
+          pwd
+          ls
           sudo ./commit-message.sh $SCHEDULE
 
       - name: Commit Changes

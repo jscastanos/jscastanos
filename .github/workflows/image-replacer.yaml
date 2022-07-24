@@ -26,13 +26,13 @@ jobs:
       - name: Run Image Replacer Script
         run: |
           cd ./scripts
-          python image-replacer.py
+          python image-replacer.py 
       
       - name: Commit Message
         id: commit-message
         run: |
           cd ./scripts
-          commit-message.sh
+          commit-message.sh ${{ github.event.schedule }}
 
       - name: Commit Changes
         run: |

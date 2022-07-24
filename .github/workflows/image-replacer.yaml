@@ -5,7 +5,6 @@ on:
     - cron: '0 21 * * *' # 9PM UTC = 5AM PH
     - cron: '0 4 * * *' # 4AM UTC  = 12PM PH
     - cron: '0 15 * * *' # 3PM UTC = 11PM PH
-  workflow_dispatch:
     
 
 
@@ -13,12 +12,6 @@ jobs:
   image-replacer:
     runs-on: ubuntu-latest
     steps:
-      - name: Which Schedule
-        env:
-          SCHEDULE : ${{ github.event.schedule }}
-        run: |
-          echo $SCHEDULE
-
       - uses: actions/checkout@v2
 
       - name: Setup Python
@@ -36,20 +29,13 @@ jobs:
           cd ./scripts
           python image-replacer.py 
       
-      - name: Commit Message
-        id: commit-message
-        shell: bash
-        run: |
-          cd ./scripts
-          ls
-          sudo ./commit-message.sh $SCHEDULE
 
       - name: Commit Changes
         run: |
           git config --global user.email 'jec.castanos@gmail.com'
           git config --global user.name 'jscastanos'
           git add .
-          git commit -m "chore[BOT]: ${{ steps.commit-message.outputs.COMMIT_MESSAGE }}"
+          git commit -m "chore[BOT]: replaced owl"
       
       - name: Push Changes
         uses: ad-m/github-push-action@master

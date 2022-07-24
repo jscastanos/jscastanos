@@ -5,6 +5,8 @@ on:
     - cron: '0 21 * * *' # 9PM UTC = 5AM PH
     - cron: '0 4 * * *' # 4AM UTC  = 12PM PH
     - cron: '0 15 * * *' # 3PM UTC = 11PM PH
+  workflow_dispatch:
+    
 
 
 jobs:
@@ -32,7 +34,7 @@ jobs:
         id: commit-message
         run: |
           cd ./scripts
-          commit-message.sh ${{ github.event.schedule }}
+          ./commit-message.sh ${{ github.event.schedule }}
 
       - name: Commit Changes
         run: |

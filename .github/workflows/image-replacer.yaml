@@ -15,6 +15,9 @@ jobs:
     steps:
       - env:
           SCHEDULE : ${{ github.event.schedule }}
+        run: |
+          echo $SCHEDULE
+
       - uses: actions/checkout@v2
 
       - name: Setup Python

@@ -5,6 +5,8 @@ on:
     - cron: '0 21 * * *' # 9PM UTC = 5AM PH
     - cron: '0 4 * * *' # 4AM UTC  = 12PM PH
     - cron: '0 15 * * *' # 3PM UTC = 11PM PH
+  workflow_dispatch:
+    
     
 
 
@@ -32,9 +34,7 @@ jobs:
       - name: Get Commit Message
         id: commit-message
         shell: bash
-        run: |
-          cd ./scripts
-          sudo ./commit-message.sh $SCHEDULE
+        run: sudo ./commit-message.sh $SCHEDULE
       
 
       - name: Commit Changes

@@ -35,11 +35,7 @@ jobs:
         shell: bash
         run: |
           cd ./scripts
-          ls
-          sudo ./commit-message.sh $SCHEDULE
-
-
-      
+          sudo commit-message.sh $SCHEDULE
 
       - name: Commit Changes
         run: |

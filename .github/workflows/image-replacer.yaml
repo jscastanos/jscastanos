@@ -32,9 +32,13 @@ jobs:
           python image-replacer.py 
 
       - name: Get Commit Message
-        id: commit-message
         shell: bash
-        run: sudo ./commit-message.sh $SCHEDULE
+        run: |
+          cd ./scripts
+          ls
+          sudo ./commit-message.sh $SCHEDULE
+
+
       
 
       - name: Commit Changes

@@ -2,13 +2,13 @@
 
 if [ $SCHEDULE -eq '0 21 * * *' ]
 then 
-  echo "::set-output name=COMMIT_MESSAGE::Wake Up Owl"
+  echo "COMMIT_MESSAGE={Wake Up Owl}" >> $GITHUB_ENV
 elif [ $SCHEDULE -eq '0 4 * * *' ]
 then 
-  echo "::set-output name=COMMIT_MESSAGE::Tired Owl"
+  echo "COMMIT_MESSAGE={Tired Owl}" >> $GITHUB_ENV
 elif [ $SCHEDULE -eq '0 12 * * *' ]
 then 
-  echo "::set-output name=COMMIT_MESSAGE::Sleeping Owl"
+  echo "COMMIT_MESSAGE={Sleeping Owl}" >> $GITHUB_ENV
 else
-  echo "::set-ouput name=COMMIT_MESSAGE::Replaced Owl"
+  echo "COMMIT_MESSAGE={Owl Owl}" >> $GITHUB_ENV
 fi

@@ -28,6 +28,13 @@ jobs:
         run: |
           cd ./scripts
           python image-replacer.py 
+
+      - name: Get Commit Message
+        id: commit-message
+        shell: bash
+        run: |
+          cd ./scripts
+          sudo ./commit-message.sh $SCHEDULE
       
 
       - name: Commit Changes
@@ -35,7 +42,7 @@ jobs:
           git config --global user.email 'jec.castanos@gmail.com'
           git config --global user.name 'jscastanos'
           git add .
-          git commit -m "chore[BOT]: replaced owl"
+          git commit -m "chore[BOT]: ${{ env.COMMIT_MESSAGE }}"
       
       - name: Push Changes
         uses: ad-m/github-push-action@master

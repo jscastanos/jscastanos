@@ -31,7 +31,7 @@ jobs:
         shell: bash
         run: |
           cd ./scripts
-          bash ./commit-message.sh $SCHEDULE
+          bash ./commit-message.sh ${{ github.event.schedule }}
 
       - name: Commit Changes
         run: |

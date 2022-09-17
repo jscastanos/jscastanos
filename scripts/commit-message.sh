@@ -6,7 +6,7 @@ then
 elif [ $SCHEDULE -eq '0 4 * * *' ]
 then 
   echo "COMMIT_MESSAGE=Tired Owl" >> $GITHUB_ENV
-elif [ $SCHEDULE -eq '0 12 * * *' ]
+elif [ $SCHEDULE -eq '0 15 * * *' ]
 then 
   echo "COMMIT_MESSAGE=Sleeping Owl" >> $GITHUB_ENV
 else

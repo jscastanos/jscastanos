@@ -1,5 +1,8 @@
 #! bin/bash
 
+# print what we got
+echo "Current schedule is $SCHEDULE" 
+
 if [ $SCHEDULE -eq '0 21 * * *' ]
 then 
   echo "COMMIT_MESSAGE=Wake Up Owl" >> $GITHUB_ENV

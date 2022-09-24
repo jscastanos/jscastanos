@@ -10,6 +10,8 @@ jobs:
   image-replacer:
     runs-on: ubuntu-latest
     steps:
+      - env: 
+          SCHEDULE: ${{ github.event.schedule }}
       - uses: actions/checkout@v2
 
       - name: Setup Python
@@ -31,7 +33,7 @@ jobs:
         shell: bash
         run: |
           cd ./scripts
-          bash ./commit-message.sh ${{ github.event.schedule }}
+          bash ./commit-message.sh ${{ env.SCHEDULE }}
 
       - name: Commit Changes
         run: |

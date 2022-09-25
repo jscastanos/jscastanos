@@ -9,9 +9,9 @@ on:
 jobs:
   image-replacer:
     runs-on: ubuntu-latest
+    env: 
+        SCHEDULE: ${{ github.event.schedule }}
     steps:
-      - env: 
-          SCHEDULE: ${{ github.event.schedule }}
       - uses: actions/checkout@v2
 
       - name: Setup Python

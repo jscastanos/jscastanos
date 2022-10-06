@@ -22,6 +22,13 @@ jobs:
       
       - name: hey
         run: echo ${{ toJson(github.event.pull_request.labels.*.name) }}
+
+
+      - name: print p
+        run: echo ${{ contains(toJson(github.event.push.labels.*.name), 'for review') }}
+      
+      - name: hey p
+        run: echo ${{ toJson(github.event.push.labels.*.name) }}
   post-test:
     needs: test
     runs-on: ubuntu-latest

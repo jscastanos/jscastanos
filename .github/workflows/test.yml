@@ -9,6 +9,8 @@ on:
 jobs:
   test:
     if: contains(github.event.pull_request.labels.*.name, 'for review')
+    outputs:
+      status: ${{ steps.early.conclusion }}
     runs-on: ubuntu-latest
     steps:
       - name: ECHO TIME
@@ -16,5 +18,10 @@ jobs:
 
       - name: HELLO
         run: echo 'hello'
+  post-test:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ needs.check.outputs.status }}
 
     

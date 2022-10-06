@@ -8,6 +8,7 @@ on:
 
 jobs:
   test:
+    if: contains(github.event.pull_request.labels.*.name, 'for review')
     runs-on: ubuntu-latest
     steps:
       - name: ECHO TIME

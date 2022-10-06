@@ -1,0 +1,14 @@
+name: "Test"
+on:
+  push:
+  pull_request:
+    branches:
+      - master
+    types: [labeled, edited]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'trigger time'
+    

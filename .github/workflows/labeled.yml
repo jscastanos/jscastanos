@@ -1,0 +1,13 @@
+name: "Test"
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: label
+        run: echo ${{ toJson(github.event.pull_request.labels.*.name) }}
+
+    

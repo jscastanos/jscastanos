@@ -10,5 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'trigger time'
+      - name: ECHO TIME
+        run: echo 'trigger time'
+
     

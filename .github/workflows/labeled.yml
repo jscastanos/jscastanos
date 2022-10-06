@@ -1,7 +1,7 @@
 name: "Label"
 on:
   pull_request:
-    types: [labeled]
+    types: [labeled, unlabeled, synchronize]
 
 jobs:
   label:

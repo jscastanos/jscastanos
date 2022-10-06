@@ -8,10 +8,10 @@ on:
       - "submitted"
 
 jobs:
-  test:
+  comment:
     runs-on: ubuntu-latest
     steps:
-      - name: label
+      - name: comment
         run: echo "comment"
 
     

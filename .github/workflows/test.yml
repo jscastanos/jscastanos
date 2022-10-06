@@ -10,5 +10,5 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: 'trigger time'
+      - run: echo 'trigger time'
     

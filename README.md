@@ -1,4 +1,4 @@
-<h1 align="center"> Hello stranger, I'm Jec. 👋</h1>
+<h1 align="center"> Hello stranger, I'm Jec 👋</h1>
 
 [![LinkedIn Badge](https://img.shields.io/badge/-jscastanos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jscastanos/)](https://www.linkedin.com/in/jscastanos/)
 

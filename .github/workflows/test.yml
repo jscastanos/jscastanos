@@ -13,4 +13,7 @@ jobs:
       - name: ECHO TIME
         run: echo 'trigger time'
 
+      - name: HELLO
+        run: echo 'hello'
+
     

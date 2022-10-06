@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test
-        run: echo "test"
+        run: echo "test here"
 
 
 

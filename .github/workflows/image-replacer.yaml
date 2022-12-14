@@ -2,9 +2,10 @@ name: Profile Image Replacer
 on:
   schedule:
     # NOTE: Until GH Actions supports timezone lets do a conversion for now
-    - cron: '0 21 * * *' # 9PM UTC = 5AM PH
-    - cron: '0 4 * * *' # 4AM UTC  = 12PM PH
-    - cron: '0 15 * * *' # 3PM UTC = 11PM PH
+    # Only run this on weekdays
+    - cron: '0 21 * * 1-5' # 9PM UTC = 5AM PH
+    - cron: '0 4 * * 1-5' # 4AM UTC  = 12PM PH
+    - cron: '0 15 * * 1-5' # 3PM UTC = 11PM PH
 
 jobs:
   image-replacer:

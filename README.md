@@ -10,9 +10,7 @@ I'm [Jec Castaños](https://github.com/jscastanos), a software engineer from The
 
 ### About Me
 
-- 🌱 I’m currently learning everything
-- 🥅 Aside from coding, I'm learning how to cook
-- ⚡ Fun fact: I love to draw/doodle. (That owl is me, its made with both ☕ and ❤️)
+I love coffee ☕ and coding 💻
 
 ### Languages and Tools
 

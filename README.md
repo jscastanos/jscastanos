@@ -1,7 +1,5 @@
 <h1 align="center"> Hello stranger, I'm Jec 👋</h1>
 
-[![LinkedIn Badge](https://img.shields.io/badge/-jscastanos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jscastanos/)](https://www.linkedin.com/in/jscastanos/)
-
 ### Nice to meet you! &nbsp; ![](https://visitor-badge.glitch.me/badge?page_id=jscastanos.jscastanos&style=flat-square&color=0088cc)
 
 I'm [Jec Castaños](https://github.com/jscastanos), a software engineer from The Philippines 🇵🇭
